@@ -15,4 +15,4 @@ def likes(names):
         num = len(names) - 2;
         ans = names[0] + ", " + names[1] + " and " + str(num) + " others like this"
         return ans
-        
+        #This is what I do for a living bro
