@@ -1,8 +1,10 @@
-# Author: Lemfon Karl Ndze'dzenyuy, Kojo E Armah, Hephziba E. U
+# Author: Lemfon Karl Ndze'dzenyuy
 ## email: karllemfon@gmail.com
 ##Purpose
 #### This is a substitution cypher that works in a circular manner. This cypher does not encode special characters and encodes capital
 #### letters only with capital letters and lower case letters with lower case letters only
+
+
 def cipher(c,key): # Arguments are the character to be encoded and the step by which the change is being done
     if (ord(c) == 32): # Makes sure that there is no attempt to encode spaces
         return c

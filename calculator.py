@@ -13,39 +13,34 @@ Remember about the order of operations! Multiplications and divisions have a hig
 def evaluate(strin):
     cal = strin.split(" ")
     i = 0
-    ans = []
     for i in range(len(cal)):
         if i < len(cal) and cal[i] == '/':
             index1 = int(cal[i-1]) / int(cal[i+1])
-            ans.append(index1)
             del cal[i-1:i+2]
             cal.insert(i-1,index1)
             print(cal)
         elif i < len(cal) and cal[i] == '*':
-             index1 = int(cal[i-1]) * int(cal[i+1])
-             ans.append(index1)
-             del cal[i-1:i+2]
-             cal.insert(i-1,index1)
-             print(cal)
+            index1 = int(cal[i-1]) * int(cal[i+1])
+            del cal[i-1:i+2]
+            cal.insert(i-1,index1)
+            print(cal)
     for i in range(len(cal)):
         if i < len(cal) and cal[i] == '-':
             index1 = int(cal[i-1]) - int(cal[i+1])
-            ans.append(index1)
             del cal[i-1:i+2]
             cal.insert(i-1,index1)
             print(cal)
         elif i < len(cal) and cal[i] == '+':
              index1 = int(cal[i-1]) + int(cal[i+1])
-             ans.append(index1)
              del cal[i-1:i+2]
              cal.insert(i-1,index1)
              print(cal)
-    if cal[1] == '+':
-        ret = int(cal[0]) + int(cal[2])
-    elif cal[1] == '-':
-        ret = int(cal[0]) - int(cal[2])
+    #if cal[1] == '+':
+        #ret = int(cal[0]) + int(cal[2])
+    #elif cal[1] == '-':
+        #ret = int(cal[0]) - int(cal[2])
     
-    return ret
+    return cal
        
-print(evaluate("2 / 2 + 3 * 4 - 6 + 2 - 3 * 5"))
+print(evaluate("2 / 2 + 3 * 4 - 6 + 2"))
 

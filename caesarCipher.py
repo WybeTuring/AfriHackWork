@@ -1,5 +1,5 @@
-def cipher(c):
-    k = ord(c) + 2
+def cipher(ch):
+    k = ord(ch) + 2
     return chr(k) 
 def decode(i):
     k = ord(i) - 2
