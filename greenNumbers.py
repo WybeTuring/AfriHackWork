@@ -1,4 +1,5 @@
 # Function to determine if a number is green
+# Determining if a given number is green
 def determineGreen(n):
     ls = list(str(n))
     ls2 = list(str(n**2))
@@ -7,18 +8,24 @@ def determineGreen(n):
         return True
     else:
         return False
-## Checking if there is a pattern in which the green numbers appear
+## Determining the i-th green number
 def green(i):
-    k = 1
-    for j in range():
-        if determineGreen(j):
-            k += 1
-            u = 1
-        else:
-            u = 0
-        if k == i and u == 1:
-            return j
-    return False
+    import time
+    start = time.time()
+    k = 0
+    num = 1
+    while k != i:
+        if determineGreen(num): k = k+1
+        num2 = num
+        if list(str(num))[-1] == '1':
+            num += 4
+        elif list(str(num))[-1] == '5':
+            num += 1
+        elif list(str(num))[-1] == '6':
+            num += 5
+    end = time.time()
+    print((end - start), "seconds were used")  
+    return num2
 
-
-print(green(30))
+print(green(16))
+        
