@@ -22,10 +22,10 @@ def printer(a):
     else:
         print("Ensure that you are entering a digit")
 
-print(printer(0))
 num = list(input("Please type in the number: "))
 num = [int(k) for k in num]
 for k in num:
-    print(printer(k))
+    print(printer(k)
+    
 
     
